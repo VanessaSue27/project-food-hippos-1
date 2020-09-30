@@ -6,7 +6,7 @@ body {
     background-image: url('./images/donutrain.gif');
     background-size: cover;
     position: absolute;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 .icon {
@@ -73,7 +73,6 @@ h1 {
     width: 17%;
     margin-bottom: 20px;
     margin-top: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
@@ -123,13 +122,13 @@ TO VANESSA AND ELLEN  */
     border: #99d9f0;
     cursor: pointer;
     color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
     padding: 16px 29px;
-    text-decoration: none;
+    /* text-decoration: none; */
     text-shadow: 0px 1px 0px #3d768a;
     margin: 7px;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 button:hover {
@@ -144,7 +143,6 @@ button:active {
 
 .good-rating-title, .sort-by-price-title {
     font-size: 40px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     color: #d74492;
     text-shadow: 2px 2px 5px #000000;
@@ -177,7 +175,6 @@ button:active {
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
-        font-family: Impact, 'Arial Narrow Bold', sans-serif;
     }
     .topnav a.active {
         background-color: #cc5394;
@@ -191,7 +188,6 @@ button:active {
     h1 {
         margin-top: 70px;
         font-size: 40px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
         color: #d74492;
         text-shadow: 2px 2px 5px #000000;
@@ -211,7 +207,6 @@ button:active {
         margin-right: 15px;
         margin-bottom: 20px;
         margin-top: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
     }
@@ -247,11 +242,10 @@ button:active {
         display: inline-block;
         cursor: pointer;
         color: #ffffff;
-        font-family: 'Calibri', 'Trebuchet MS', sans-serif;
         font-size: 20px;
         font-weight: bold;
         padding: 16px 29px;
-        text-decoration: none;
+        /* text-decoration: none; */
         text-shadow: 0px 1px 0px #3d768a;
     }
     button:hover {
@@ -265,7 +259,6 @@ button:active {
     .good-rating-title, .sort-by-price-title {
         display: none;
         font-size: 40px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
         color: #d74492;
         text-shadow: 2px 2px 5px #000000;
@@ -287,7 +280,6 @@ button:active {
         margin-right: 15px;
         margin-bottom: 20px;
         margin-top: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
     }
@@ -301,11 +293,10 @@ button:active {
         display: inline-block;
         cursor: pointer;
         color: #ffffff;
-        font-family: 'Calibri', 'Trebuchet MS', sans-serif;
         font-size: 13px;
         font-weight: bold;
         padding: 16px 29px;
-        text-decoration: none;
+        /* text-decoration: none; */
         text-shadow: 0px 1px 0px #3d768a;
     }
     button:hover {
