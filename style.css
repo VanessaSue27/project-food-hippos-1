@@ -1,4 +1,4 @@
-.main-container, .good-rating-container {
+.main-container, .good-rating-container, .sort-by-price-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -25,6 +25,6 @@ section p {
     margin: 2px 0 2px 15px;
 }
 
-.good-rating-title {
+.good-rating-title, .sort-by-price-title {
 display: none;
 }

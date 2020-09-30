@@ -86,7 +86,7 @@ function filterGoodRatingRestaurants() {
       'user-key': `${API_KEY}`
     })
   });
-
+  
   fetch(request)
   .then ((response) => {
       return response.json();
@@ -95,7 +95,7 @@ function filterGoodRatingRestaurants() {
   .then((restaurantsObject) => {
     const restaurantsArray = restaurantsObject.restaurants;
     restaurantsArray.forEach((item) => {
-      //Condition that filters only Restaurants with Rating higher than 3
+      //Condition that filters only Restaurants with Rating higher than 4
       if(item.restaurant.user_rating.aggregate_rating >= 3) {
         goodRatingSection.innerHTML += generateRestaurantsHTML(item);
         onlyGoodButton.removeEventListener("click", filterGoodRatingRestaurants); //so button can't be clicked again after list is shown
@@ -106,6 +106,41 @@ function filterGoodRatingRestaurants() {
   .catch((error) => {
       console.log(error);
   });
+};
+
+//Button and Function to SOrt by Price
+const sortByPriceContainer = document.getElementById('sortByPriceContainer');
+const sortByPriceTitle = document.getElementById('sortByPriceTitle');
+const priceButton = document.getElementById('priceButton');
+priceButton.addEventListener('click', sortByPrice);
+
+function sortByPrice() {
+  const sortByPriceURL = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityID}&entity_type=citycount=15&cuisines=${cuisineID}&sort=cost&order=asc`;
+    
+  const request = new Request(sortByPriceURL, {
+    headers: new Headers({
+      'Accept': 'application/json',
+      'user-key': `${API_KEY}`
+    })
+  });
+
+  fetch(request)
+  .then ((response) => {
+      return response.json();
+  })
+
+  .then((restaurantsObject) => {
+    //Extracts restaurants array from the main json object we got in the response
+      const sortedRestaurantsArray = restaurantsObject.restaurants;
+      mainContentContainer.style.display = 'none';
+      //sortByPriceTitle.style.display = 'block'; add display none in this in css after merge
+
+      priceButton.removeEventListener('click', sortByPrice);
+
+      sortedRestaurantsArray.forEach((restaurant) => {
+        sortByPriceContainer.innerHTML += generateRestaurantsHTML(restaurant);  //Calls function togenerate the HTML for each restaurant
+    })
+  })
 };
 
 // Function to Restart the Search query
