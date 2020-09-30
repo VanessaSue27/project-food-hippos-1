@@ -67,4 +67,36 @@ function generateRestaurantsHTML(item) {
         return './img_placeholder.png' //Put here path to the image placeholder for restaurant without a feature_image value
       }
     };
+};  
+  
+const sortByPriceContainer = document.getElementById('sortByPriceContainer');
+const sortByPriceTitle = document.getElementById('sortByPriceTitle');
+const priceButton = document.getElementById('priceButton');
+priceButton.addEventListener('click', sortByPrice);
+
+function sortByPrice() {
+  const sortByPriceURL = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityID}&entity_type=citycount=15&cuisines=${cuisineID}&sort=cost&order=asc`;
+    
+  const request = new Request(sortByPriceURL, {
+    headers: new Headers({
+      'Accept': 'application/json',
+      'user-key': `${API_KEY}`
+    })
+  });
+  fetch(request)
+    .then ((response) => {
+      return response.json();
+    })
+    .then((restaurantsObject) => {
+    //Extracts restaurants array from the main json object we got in the response
+      const sortedRestaurantsArray = restaurantsObject.restaurants;
+      mainContentContainer.style.display = 'none';
+      //sortByPriceTitle.style.display = 'block'; add display none in this in css after merge
+
+      priceButton.removeEventListener('click', sortByPrice);
+
+      sortedRestaurantsArray.forEach((restaurant) => {
+        sortByPriceContainer.innerHTML += generateRestaurantsHTML(restaurant);  //Calls function togenerate the HTML for each restaurant
+    })
+  })
 };
