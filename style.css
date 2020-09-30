@@ -1,4 +1,4 @@
-.main-container {
+.main-container, .good-rating-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -23,4 +23,8 @@ section img {
 
 section p {
     margin: 2px 0 2px 15px;
+}
+
+.good-rating-title {
+display: none;
 }

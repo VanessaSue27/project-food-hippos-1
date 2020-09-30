@@ -10,7 +10,14 @@
 <body>
     <h1>Find Donut shop restaurants in San Francisco</h1> <!-- Main tittle in page-->
 
-    <main class="main-container" id="main-content"></main>  <!-- container for all dynamically generated HTML from JavaScript-->    
+    <button class="rating-button" id="only-good-rating-button">Top Rated Favorites</button>
+
+    <button class="restart-button" id="restart-button" onclick="restart()">Clear Search</button>
+
+    <main class="main-container" id="main-content"></main>  <!-- container for all dynamically generated HTML from JavaScript-->
+    
+    <h2 id="good-rating-text" class="good-rating-title">Our Top Rated Donut Shops in San Fran!</h2> <!-- container for all restaurants results after sorting by rating-->
+    <div id="only-good-rating-container" class="good-rating-container"></div>
 
     <script type="text/javascript" src="./script.js"></script>
 </body>
