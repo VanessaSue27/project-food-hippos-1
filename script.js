@@ -64,7 +64,7 @@ function generateRestaurantsHTML(item) {
       if(restaurantImageURLFromAPI) {
         return restaurantImageURLFromAPI;
       } else {
-        return './img_placeholder.png' //Put here path to the image placeholder for restaurant without a feature_image value
+        return './images/donut.jpg' //Put here path to the image placeholder for restaurant without a feature_image value
       }
     };
 };
@@ -74,11 +74,11 @@ const goodRatingSection = document.getElementById('only-good-rating-container');
 const onlyGoodButton = document.getElementById('only-good-rating-button');
 onlyGoodButton.addEventListener("click", filterGoodRatingRestaurants);
 
-const goodRatingText = document.getElementById('good-rating-text');
+// const goodRatingText = document.getElementById('good-rating-text');
 
 function filterGoodRatingRestaurants() {
   mainContentContainer.style.display = 'none';  //Hides main content div showing all 10 restaurants
-  goodRatingText.style.display = 'block'; //and shows div where we generate only very good rated restaurants
+  // goodRatingText.style.display = 'block'; //and shows div where we generate only very good rated restaurants
 
   const request = new Request(requestURL, {
     headers: new Headers({

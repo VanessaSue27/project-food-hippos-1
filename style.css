@@ -1,3 +1,62 @@
+/* .good-rating-title, .sort-by-price-title {
+display: none;
+} */
+
+body {
+    background-image: url('./images/donutrain.gif');
+    background-size: cover;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.icon {
+    height: 43px;
+    padding-left: 40px;
+}
+
+/* NAVBAR */
+
+.topnav {
+    height: 48px;
+    background-image: url('images/donut-background.jpg');
+    background-size: contain;
+    border-radius: 15px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.topnav a {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a.active {
+    background-color: #cc5394;
+    color: white;
+}
+
+.topnav a:hover {
+    background-color: #f8b237;
+    color: #d74394;
+}
+
+/* END NAVBAR */
+
+h1 {
+    margin-top: 70px;
+    font-size: 40px;
+    text-align: center;
+    color: #d74492;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+/* JAVASCRIPTEN */
+
 .main-container, .good-rating-container, .sort-by-price-container {
     display: flex;
     flex-wrap: wrap;
@@ -5,26 +64,256 @@
 }
 
 .restaurant-item {
-    border: 1px solid grey;
+    border: 4px solid rgb(255, 255, 255);
+    background-color: #f8b237;
     display: flex;
     flex-direction: column;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 17%;
     margin-bottom: 20px;
     margin-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 }
 
 section h2 {
-    margin-left: 15px;
+    height: 80px;
+    margin: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-bottom: 2px solid white;
+    border-width: 5px;
+    padding: 10px;
 }
 
 section img {
+    object-fit: cover;
     width: 100%;
+    height: 25%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 section p {
     margin: 2px 0 2px 15px;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    height: 100px;
+    background-image: url('images/donut-background.jpg');
+    background-size: cover;
+}
+
+/* 
+TO VANESSA AND ELLEN  */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.price-button, .rating-button, .restart-button {
+    box-shadow: 0px 10px 14px -7px #02515e;
+    background: linear-gradient(to bottom, #99d9f0 5%, #17a9bf 100%);
+    background-color: #99d9f0;
+    border-radius: 8px;
+    border: #99d9f0;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px 29px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+    margin: 7px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #17a9bf 5%, #99d9f0 100%);
+    background-color: #17a9bf;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
 }
 
 .good-rating-title, .sort-by-price-title {
-display: none;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #d74492;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* iPAD VIEW */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        background-image: url('images/donutrain.gif');
+        background-size: initial;
+        position: absolute;
+    }
+    /* NAVBAR */
+    .topnav {
+        background-image: url('images/donut-background.jpg');
+        background-size: cover;
+        height: 45px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .topnav a {
+        float: right;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    }
+    .topnav a.active {
+        background-color: #cc5394;
+        color: white;
+    }
+    .topnav a:hover {
+        background-color: #f8b237;
+        color: #d74394;
+    }
+    /* END NAVBAR */
+    h1 {
+        margin-top: 70px;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        color: #d74492;
+        text-shadow: 2px 2px 5px #000000;
+    }
+    /* JAVASCRIPTEN */
+    .main-container, .good-rating-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .restaurant-item {
+        width: 220px;
+        border: 4px solid rgb(255, 255, 255);
+        background-color: #f8b237;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+    }
+    section h2 {
+        margin-left: 15px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    section img {
+        width: 100%;
+        height: 30%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    section p {
+        margin: 2px 0 2px 15px;
+        color: rgb(255, 255, 255);
+    }
+    footer {
+        height: 100px;
+
+        background-image: url('images/donut-background.jpg');
+        background-size: contain;
+    }
+    /* 
+    TO VANESSA AND ELLEN  */
+    .price-button, .rating-button, .restart-button {
+        box-shadow: 0px 10px 14px -7px #02515e;
+        background: linear-gradient(to bottom, #99d9f0 5%, #17a9bf 100%);
+        background-color: #99d9f0;
+        border-radius: 8px;
+        border: #99d9f0;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 16px 29px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #3d768a;
+    }
+    button:hover {
+        background: linear-gradient(to bottom, #17a9bf 5%, #99d9f0 100%);
+        background-color: #17a9bf;
+    }
+    button:active {
+        position: relative;
+        top: 1px;
+    }
+    .good-rating-title, .sort-by-price-title {
+        display: none;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        color: #d74492;
+        text-shadow: 2px 2px 5px #000000;
+    }
+}
+
+/* Mobile VIEW */
+
+@media only screen and (max-width: 600px) {
+    .icon {
+        height: 43px;
+    }
+    .restaurant-item {
+        width: 290px;
+        border: 4px solid rgb(255, 255, 255);
+        background-color: #f8b237;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+    }
+    .price-button, .rating-button, .restart-button {
+        height: 80px;
+        box-shadow: 0px 10px 14px -7px #02515e;
+        background: linear-gradient(to bottom, #99d9f0 5%, #17a9bf 100%);
+        background-color: #99d9f0;
+        border-radius: 8px;
+        border: #99d9f0;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 16px 29px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #3d768a;
+    }
+    button:hover {
+        background: linear-gradient(to bottom, #17a9bf 5%, #99d9f0 100%);
+        background-color: #17a9bf;
+    }
+    button:active {
+        position: relative;
+        top: 1px;
+    }
 }

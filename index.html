@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donuts in SF</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/184/184549.png">
 </head>
 
+<header>
+    <div class="topnav">
+        <img class="icon" src="https://image.flaticon.com/icons/png/512/184/184549.png">
+        <a class="active" href="#home">Home</a>
+        <a class="active" href="#news">News</a>
+        <a class="active" href="#contact">Log in</a>
+        <a class="active" href="#about">Sign in</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</header>
+
 <body>
-    <h1>Find Donut shop restaurants in San Francisco</h1> <!-- Main tittle in page-->
+    <h1>FIND DONUTS IN SAN FRANCISCO</h1> <!-- Main tittle in page-->
 
-    <button class="rating-button" id="only-good-rating-button">Top Rated Favorites</button>
+    <div class="buttons">
+        <button class="rating-button" id="only-good-rating-button">Top Rated Favorites</button>
 
-    <button id="priceButton" class="price-button">Sort by price</button>
+        <button id="priceButton" class="price-button">Sort by price</button>
 
-    <button class="restart-button" id="restart-button" onclick="restart()">Clear Search</button>
+        <button class="restart-button" id="restart-button" onclick="restart()">Clear Search</button>
+    </div>
 
-    <main class="main-container" id="main-content"></main>  <!-- container for all dynamically generated HTML from JavaScript-->
-    
-    <h2 id="good-rating-text" class="good-rating-title">Our Top Rated Donut Shops in San Fran!</h2> <!-- container for all restaurants results after sorting by rating-->
+    <main class="main-container" id="main-content"></main>
+    <!-- container for all dynamically generated HTML from JavaScript-->
+
+    <!-- <h2 id="good-rating-text" class="good-rating-title">Our Top Rated Donut Shops in San Fran!</h2> -->
+    <!-- container for all restaurants results after sorting by rating-->
     <div id="only-good-rating-container" class="good-rating-container"></div>
 
-    <!-- <h2 id="sortByPriceTitle" class=“sort-by-price-title”>Sort by price</h2> --> <!-- h2 that is glitchy-->
+    <!-- <h2 id="sortByPriceTitle" class=“sort-by-price-title”>Sort by price</h2> -->
+    <!-- h2 that is glitchy-->
     <div id="sortByPriceContainer" class="sort-by-price-container"></div>
+
+    <footer>
+
+    </footer>
 
     <script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>
